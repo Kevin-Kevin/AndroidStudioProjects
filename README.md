@@ -33,14 +33,14 @@
 - 但是 一加 8t 不支持系统api trafficStats 查看每个 App 的情况
 - 最后只做了App 每天的数据累计使用情况
 
-![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/AppWidget.jpgnetflow.jpg)
+![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/netflow.jpg)
 
 ## Reminder
 
 - 准备做一个 iOS 提醒事项
 - SQLite 数据库的使用还在学习中...
 
-![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/AppWidget.jpgReminder.jpg)
+![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/Reminder.jpg)
 
 ## TestProject
 
@@ -77,4 +77,4 @@
 - 实现 TextView 跟随手指移动
 - 继承 TextView 会报错,因为谷歌之前改了,可以已经没有 TextView 了,xml 里面就算写 TextView 也会被编译器优化成  AppCompatTextView 
 
-![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/AppWidget.jpgTouchEvent.png)
+![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/TouchEvent.png)
