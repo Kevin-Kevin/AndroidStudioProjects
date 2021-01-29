@@ -8,8 +8,6 @@
 
 ![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/Alarm.jpg)
 
-
-
 ## AppWidgetDesktop 
 
 - 一个桌面微件
@@ -78,3 +76,4 @@
 - 继承 TextView 会报错,因为谷歌之前改了,可以已经没有 TextView 了,xml 里面就算写 TextView 也会被编译器优化成  AppCompatTextView 
 
 ![image](https://github.com/Kevin-Kevin/AndroidStudioProjects/blob/master/readme_picture/TouchEvent.png)
+
