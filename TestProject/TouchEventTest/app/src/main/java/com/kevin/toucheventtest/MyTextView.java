@@ -4,14 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
 public class MyTextView extends AppCompatTextView {
-  float originalX = 0;
-  float originalY = 0;
+  float lastX = 0;
+  float lastY = 0;
   float translationX = 0;
   float translationY = 0;
 
@@ -30,6 +29,7 @@ public class MyTextView extends AppCompatTextView {
 
   @Override
   public boolean onTouchEvent(MotionEvent event) {
+    // MotionEvent 变量值测试
     int actionMasked = event.getActionMasked();
     int pointerCount = event.getPointerCount();
     // int pointerID = event.getPointerId(pointerCount);
@@ -62,8 +62,8 @@ public class MyTextView extends AppCompatTextView {
 
     switch (action) {
       case MotionEvent.ACTION_DOWN:
-        originalX = event.getRawX();
-        originalY = event.getRawY();
+        lastX = event.getRawX();
+        lastY = event.getRawY();
         Log.d("touch", "Action down, index = " + String.valueOf(event.getActionIndex()));
         Log.d("touch",
                 "x = " + String.valueOf(event.getX()) + " , y = " + String.valueOf(event.getY()));
@@ -71,10 +71,11 @@ public class MyTextView extends AppCompatTextView {
       case MotionEvent.ACTION_MOVE:
         Log.d("touch translation",
                 String.valueOf(translationX) + " " + String.valueOf(translationY));
-        translationX = translationX + event.getRawX() - originalX;
-        translationY = translationY + event.getRawY() - originalY;
-        originalX = event.getRawX();
-        originalY = event.getRawY();
+        translationX = translationX + event.getRawX() - lastX;
+        translationY = translationY + event.getRawY() - lastY;
+        
+        lastX = event.getRawX();
+        lastY = event.getRawY();
         this.setTranslationX(translationX);
         this.setTranslationY(translationY);
 
